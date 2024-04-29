@@ -1,11 +1,9 @@
 import React from 'react'
-import Navigation from './navigation'
 
 export default function home() {
     return (
         <div>
-            <Navigation></Navigation>
-            home
+            <h1>Welcome to our home </h1>
         </div>
     )
 }
