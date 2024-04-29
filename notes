@@ -1,0 +1,14 @@
+What JSON Web Tokens (JWT)?
+
+pip install djangorestframework
+pip install djangorestframework-simplejwt
+pip install django-cors-headers
+
+django-admin startproject backend
+
+python manage.py startapp authentication
+
+python manage.py migrate
+
+
+python manage.py createsuperuser
