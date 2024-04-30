@@ -1,9 +1,10 @@
 import React from 'react'
-import { css } from '@linaria/core';
+import { css } from '@emotion/css'
 
 const h1 = css`
   font-size: 24px;
   font-weight: bold;
+  color: orange;
 `;
 
 
