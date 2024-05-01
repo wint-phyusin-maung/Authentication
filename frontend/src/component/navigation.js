@@ -10,16 +10,33 @@ const Nav = css`
    height:8vh;
    margin: 0 auto;
    display: flex;
-   justify-content: space-between;
+   align-center: center;
    border-bottom: 1px solid #ccc;
+
+   h6{
+        width: 2rem;
+   }
+`
+
+const logo = css`
+   margin-left: 0;
+   align-self: center;
 `
 
 const Navbar = css`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+
+    ul 
+    {
+        display: flex;
+    }
 
     li {
         list-style-type: none;
-        padding: 1.2rem;
+        margin-left: 1rem;
     }
 `
 
@@ -30,20 +47,20 @@ const span = css`
 export default function Navigation() {
     return (
         <nav className={Nav}>
-            <div>
+            <div className={logo}>
                 <h6>
-                    <CIcon icon={cilShieldAlt} size="md" style={{ '--ci-primary-color': 'blue' }} />
+                    <CIcon icon={cilShieldAlt} style={{ '--ci-primary-color': 'blue' }} />
                     <span className={span}>KopoKie</span>
                 </h6>
 
             </div>
-            <div>
-                <ul className={Navbar}>
+            <div className={Navbar}>
+                <ul>
                     <li>
-                        <Link style={{ textDecoration: 'none' }} to="/">Home</Link>
+                        <Link className={css`text-decoration: none;`} to="/">Home</Link>
                     </li>
                     <li>
-                        <Link style={{ textDecoration: 'none' }} to='/logout'>Logout</Link>
+                        <Link className={css`text-decoration: none;`} to='/logout'>Logout</Link>
                     </li>
                 </ul>
             </div>
