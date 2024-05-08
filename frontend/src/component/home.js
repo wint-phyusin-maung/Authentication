@@ -7,13 +7,17 @@ const h1 = css`
   color: orange;
 `;
 
+const divOne = css`
+  font-size: 1.2rem;
+`
+
 
 export default function home() {
     return (
-        <div>
+        <div className={divOne}>
             <h1 className={h1}>Welcome to our home </h1>
             <p>
-                Basic Parts of a Webpage ... Header or Banner: Located at the top of a webpage. It can include the company logo, a title and sometimes a search box for the site.
+               Lorem15
             </p>
         </div>
     )
