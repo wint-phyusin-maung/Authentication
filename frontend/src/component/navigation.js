@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import { css } from '@emotion/css'
 import { Link } from 'react-router-dom'
 import CIcon from '@coreui/icons-react';
@@ -45,6 +45,14 @@ const span = css`
 `
 
 export default function Navigation() {
+
+    const [isAuth, setIsAuth] = useState(false);
+
+    useEffect(() => {
+        if(localStorage.getItem('access_token') !== null){
+            setIsAuth(true)
+        }
+    },[isAuth])
     return (
         <nav className={Nav}>
             <div className={logo}>
@@ -59,9 +67,15 @@ export default function Navigation() {
                     <li>
                         <Link className={css`text-decoration: none;`} to="/">Home</Link>
                     </li>
+                  
+                    {isAuth ? 
                     <li>
                         <Link className={css`text-decoration: none;`} to='/logout'>Logout</Link>
+                    </li> : 
+                     <li>
+                     <Link className={css`text-decoration: none;`} to='/login'>Login</Link>
                     </li>
+                    }
                 </ul>
             </div>
         </nav>

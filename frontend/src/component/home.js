@@ -1,6 +1,5 @@
 import React from 'react'
 import { css } from '@emotion/css'
-import nature from '../../public/images/natureev.jpg'
 
 const h1 = css`
   font-size: 24px;
@@ -9,7 +8,7 @@ const h1 = css`
 `;
 
 const divOne = css`
-  background-image: url(${nature})
+  background-color: grey;
 
 `
 
