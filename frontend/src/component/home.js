@@ -8,7 +8,7 @@ const h1 = css`
 `;
 
 const divOne = css`
-  background-color: grey;
+  width: 80%;
 
 `
 
