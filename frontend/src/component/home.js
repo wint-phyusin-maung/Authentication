@@ -1,24 +1,25 @@
-import React from 'react'
-import { css } from '@emotion/css'
+import React from 'react';
+import { css } from '@emotion/css';
 
 const h1 = css`
   font-size: 24px;
   font-weight: bold;
-  color: orange;
 `;
 
 const divOne = css`
-  width: 80%;
+  width: 100%;
+  background-image: url('/images/natureev.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
 
-`
-
-
-export default function home() {
+export default function Home() {
     return (
         <div className={divOne}>
-            <h1 className={h1}>Welcome to our home </h1>
-            
+            <h1 className={h1}>Welcome to our home</h1>
+            <p></p>
         </div>
-    )
+    );
 }
-

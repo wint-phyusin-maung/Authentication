@@ -7,7 +7,7 @@ import { cilShieldAlt } from '@coreui/icons';
 
 const Nav = css`
    width: 80%;
-   height:8vh;
+   height:10vh;
    margin: 0 auto;
    display: flex;
    align-center: center;
@@ -57,7 +57,7 @@ export default function Navigation() {
         <nav className={Nav}>
             <div className={logo}>
                 <h6>
-                    <CIcon icon={cilShieldAlt} style={{ '--ci-primary-color': 'blue' }} />
+                    <CIcon icon={cilShieldAlt} style={{ '--ci-primary-color': 'green' }} />
                     <span className={span}>KopoKie</span>
                 </h6>
 
