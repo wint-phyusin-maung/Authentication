@@ -20,17 +20,18 @@ const subOne = css`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: green;
-  backdrop-filter: blur(10px);
+  background-image: green;
+  backdrop-filter: blur(4px);
   width: 50%;
   align-items: flex-start;
   padding: 3rem;
   margin-right: 28rem;
 
-  h1,p {
+  h1, p {
     padding: 1.2rem;
+    color: white;
   }
-`
+`;
 
 const Button = css`
   border: none;
