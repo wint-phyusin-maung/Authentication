@@ -47,6 +47,15 @@ const span = css`
 export default function Navigation() {
 
     const [isAuth, setIsAuth] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleActiveClass = () => {
+        setIsActive(!isActive);
+      };
+
+    const removeActive = () => {
+        setIsActive(false)
+      };
 
     useEffect(() => {
         if(localStorage.getItem('access_token') !== null){
@@ -64,19 +73,25 @@ export default function Navigation() {
             </div>
             <div className={Navbar}>
                 <ul>
-                    <li>
+                    <li onClick={removeActive}>
                         <Link className={css`text-decoration: none;`} to="/">Home</Link>
                     </li>
                   
                     {isAuth ? 
-                    <li>
+                    <li onClick={removeActive}>
                         <Link className={css`text-decoration: none;`} to='/logout'>Logout</Link>
                     </li> : 
-                     <li>
+                     <li onClick={removeActive}>
                      <Link className={css`text-decoration: none;`} to='/login'>Login</Link>
                     </li>
                     }
                 </ul>
+
+                <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`}  onClick={toggleActiveClass}>
+                    <span className={`${styles.bar}`}></span>
+                    <span className={`${styles.bar}`}></span>
+                    <span className={`${styles.bar}`}></span>
+                </div>
             </div>
         </nav>
     )
